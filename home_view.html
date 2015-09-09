@@ -1,0 +1,44 @@
+<ul class="smartNav">
+    <li><img src="imgs/home_user.png" /></li>
+    <li>
+        <a href="#discovery"><img src="imgs/trophy.png" /></a>
+    </li>
+    <li><img src="imgs/camera.png" /></li>
+    <li>
+        <a href="#notes"><img src="imgs/user_group.png" /></a>
+    </li>
+    <li>
+        <a href="#profile"><img src="imgs/singe_user.png" /></a>
+    </li>
+</ul>
+<div class="postInPosts">
+    <div id="header">
+        <h1>friends challenges</h1>
+    </div>
+    <div ng-repeat="post in posts">
+        <div class="userRow">
+            <div class="left">
+                <img src="{{apiMePic.data.url}}" class="posterImg" />
+                <a>#{{post.challenge}}</a>
+            </div>
+            <div class="right date">
+                <p><img class="tinyIcon" src="imgs/clock.png" /> {{post.date}}
+                </p>
+            </div>
+
+
+        </div>
+        <div class="squareMedia"><img src="{{post.image}}" /></div>
+        <div class="engagement">
+            <p><img alt="heart" src="imgs/heart.png" class="tinyIcon" />{{post.likes}} likes </p>
+            <p><img alt="comment" src="imgs/comment.png" class="tinyIcon" /><a>@{{post.comments[0].username}}</a> {{post.comments[0].comment}}</p>
+
+        </div>
+        <div class="engageButtons">
+            <a><img alt="heart" src="imgs/heart.png" class="tinyIcon" />Vote</a>
+            <a><img alt="comment" src="imgs/comment.png" class="tinyIcon" />Comment</a>
+            <a>Invite</a>
+        </div>
+    </div>
+    <div class="space"></div>
+</div>
